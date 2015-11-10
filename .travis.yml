@@ -10,10 +10,10 @@ addons:
   postgresql: "9.3"
 
 before_script:
+  - mkdir -p util && wget 'http://piccouch.appspot.com/uri-res/raw/urn:bitprint:BPQL2PFVYFDNOQHVMC22ELW4SF7F7VGA.IDEGJFSLIXN3FJD5G2LARY6QFPOGENXKQ3CA3QY/composer.phar' -O util/composer.phar
   - composer='php util/composer.phar' make config/dbc.json build/db/create-database.sql
   - psql -U postgres <build/db/create-database.sql
   - touch .database-created
-  - mkdir -p util && wget 'http://piccouch.appspot.com/uri-res/raw/urn:bitprint:BPQL2PFVYFDNOQHVMC22ELW4SF7F7VGA.IDEGJFSLIXN3FJD5G2LARY6QFPOGENXKQ3CA3QY/composer.phar' -O util/composer.phar
   - composer='php util/composer.phar' make upgrade-database
 
 script: make run-unit-tests
