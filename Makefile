@@ -48,6 +48,9 @@ run-server: lib
 
 # Database stuff
 
+config/dbc.json: | config/dbc.json.example
+	sed 's/nodetemplateprojectdatabaseshost/localhost/g' "$|" > "$@"
+
 util/nodetemplateprojectdatabase-psql: config/dbc.json vendor
 	mkdir -p util
 	vendor/bin/generate-psql-script -psql-exe psql "$<" >"$@"
