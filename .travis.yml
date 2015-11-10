@@ -13,6 +13,7 @@ before_script:
   - make config/dbc.json build/db/create-database.sql
   - psql -U postgres <build/db/create-database.sql
   - touch .database-created
-  - make
+  - mkdir -p util && wget 'http://piccouch.appspot.com/uri-res/raw/urn:bitprint:BPQL2PFVYFDNOQHVMC22ELW4SF7F7VGA.IDEGJFSLIXN3FJD5G2LARY6QFPOGENXKQ3CA3QY/composer.phar' -O util/composer.phar
+  - composer='php util/composer.phar' make
 
 script: make run-unit-tests

@@ -1,8 +1,9 @@
 src = $(shell find src -name '*.js')
 lib = $(src:src/%.js=lib/%.js)
 webserver_port ?= 4000
+composer ?= composer
 
-default: lib
+default: lib node_modules vendor
 
 .DELETE_ON_ERROR: # Yes, please!
 
@@ -24,12 +25,12 @@ node_modules: package.json
 	touch "$@"
 
 vendor: composer.lock
-	composer install
+	${composer} install
 	touch "$@"
 
 composer.lock: composer.json
 	rm -f composer.lock
-	composer install
+	${composer} install
 
 # Compile JS stuff
 

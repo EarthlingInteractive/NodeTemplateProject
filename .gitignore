@@ -1,8 +1,10 @@
+/.database-created
 /build/db/create-database.sql
 /build/db/drop-database.sql
 /composer.lock
 /lib
 /node_modules
+/util/composer.phar
 /util/nodetemplateproject-psql
 /util/nodetemplateproject-pg_dump
 /vendor
