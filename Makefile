@@ -49,7 +49,7 @@ run-server: lib
 # Database stuff
 
 config/dbc.json: | config/dbc.json.example
-	sed 's/nodetemplateprojectdatabaseshost/localhost/g' "$|" > "$@"
+	sed 's/nodetemplateprojectdatabasehost/localhost/g' "$|" > "$@"
 
 util/nodetemplateprojectdatabase-psql: config/dbc.json vendor
 	mkdir -p util
