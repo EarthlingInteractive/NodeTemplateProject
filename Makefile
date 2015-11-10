@@ -4,6 +4,8 @@ webserver_port ?= 4000
 
 default: lib
 
+.DELETE_ON_ERROR: # Yes, please!
+
 .PHONY: \
 	clean \
 	create-database \
