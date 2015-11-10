@@ -2,14 +2,14 @@
 
 class NodeTemplateProjectNS_Registry
 {
-	protected $postResponseJobs = [];
+	protected $postResponseJobs = array();
 	
 	protected $configDir;
 	public function __construct( $configDir ) {
 		$this->configDir = $configDir;
 	}
 	
-	protected $configCache = [];
+	protected $configCache = array();
 	public function getConfig( $name ) {
 		$parts = explode('/', $name);
 		$file = array_shift($parts);
@@ -109,7 +109,7 @@ class NodeTemplateProjectNS_Registry
 		if( file_exists($repoListFile) ) {
 			$repos = $this->readLstFile($repoListFile);
 		} else {
-			$repos = [];
+			$repos = array();
 		}
 		array_unshift($repos, NodeTemplateProjectNS_ROOT_DIR.'/datastore');
 		return $repos;
@@ -138,14 +138,14 @@ class NodeTemplateProjectNS_Registry
 	 * Components that have been explicitly configured.  Will not be
 	 * wiped out by clean().
 	 */
-	protected $components = [];
+	protected $components = array();
 
 	/**
 	 * Components loaded lazily which will presumably be loaded the
 	 * same way again if the the cache is cleared.  Will be emptied by
 	 * clean().
 	 */
-	protected $cachedComponents = [];
+	protected $cachedComponents = array();
 	
 	public function __isset($attrName) {
 		try {
@@ -163,7 +163,7 @@ class NodeTemplateProjectNS_Registry
 	 *
 	 * If you've defined a loadXyz function, then this is unnecessary.
 	 */
-	protected static $funnilyCasedComponentNames = ['ABC decoder', 'REST action authorizer'];
+	protected static $funnilyCasedComponentNames = array('ABC decoder', 'REST action authorizer');
 	
 	public function __get($attrName) {
 		// If something's been explicitly overridden, return that.
@@ -222,7 +222,7 @@ class NodeTemplateProjectNS_Registry
 	 * Use cleanClone() to get a copy of the registry with the cache cleared.
 	 */
 	protected function clean() {
-		$this->cachedComponents = [];
+		$this->cachedComponents = array();
 	}
 
 	/**
@@ -245,7 +245,7 @@ class NodeTemplateProjectNS_Registry
 	}
 	
 	public function withSchema(EarthIT_Schema $schema) {
-		return $this->with(['schema'=>$schema]);
+		return $this->with(array('schema'=>$schema));
 	}
 	public function withNamedSchema($name) {
 		return $this->withSchema($this->loadSchema($name));
