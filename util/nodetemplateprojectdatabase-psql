@@ -1,0 +1,5 @@
+#!/bin/sh
+
+export PGPASSWORD='nodetemplateprojectdatabasepassword'
+export PGCLIENTENCODING='UTF-8'
+exec psql 'nodetemplateprojectdatabase' -U 'nodetemplateprojectdatabaseuser' -h 'localhost' -p '5432' "$@"

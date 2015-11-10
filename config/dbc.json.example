@@ -1,0 +1,8 @@
+{
+    "dbname": "nodetemplateprojectdatabase",
+    "host": "nodetemplateprojectdatabasehost",
+    "user": "nodetemplateprojectdatabaseuser",
+    "password": "nodetemplateprojectdatabasepassword",
+    "driver": "pdo_pgsql",
+    "charset": "UTF-8"
+}

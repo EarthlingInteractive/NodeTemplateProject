@@ -1,2 +1,8 @@
-node_modules
-lib
+/build/db/create-database.sql
+/build/db/drop-database.sql
+/composer.lock
+/lib
+/node_modules
+/util/nodetemplateproject-psql
+/util/nodetemplateproject-pg_dump
+/vendor

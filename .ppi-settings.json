@@ -1,0 +1,11 @@
+{
+	"projectName": "Node Template Project",
+	"phpNamespace": "NodeTemplateProjectNS",
+	"databaseName": "nodetemplateprojectdatabase",
+	"databaseUser": "nodetemplateprojectdatabaseuser",
+	"databaseHost": "nodetemplateprojectdatabasehost",
+	"databasePassword": "nodetemplateprojectdatabasepassword",
+	"databaseNamespace": "nodetemplateprojectdatabasenamespace",
+	"deploymentUrlPrefix": "http://nodetemplateprojecthost/",
+	"sourceDirs": ["src","test"]
+}
