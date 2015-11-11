@@ -3,7 +3,7 @@
 		"doctrine/dbal": "^2.4",
 		"earthit/php-common": "^1.1.0",
 		"earthit/dbc": "^1.1.0",
-		"earthit/php-project-utils": "^0.0.14"
+		"earthit/php-project-utils": "^0.0.15"
    },
 	"autoload": {
 		"psr-0": {
