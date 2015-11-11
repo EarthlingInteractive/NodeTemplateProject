@@ -6,7 +6,7 @@ const app = express();
 
 app.get('/', (req, res, next) => {
 	res.contentType('text/plain');
-	res.send("Welcome to NodeN2R!");
+	res.send("Welcome to Node Template Project!");
 });
 
 app.use(n2rServer.expressHandler);
