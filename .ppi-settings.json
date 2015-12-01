@@ -6,6 +6,5 @@
 	"databaseHost": "nodetemplateprojectdatabasehost",
 	"databasePassword": "nodetemplateprojectdatabasepassword",
 	"databaseNamespace": "nodetemplateprojectdatabasenamespace",
-	"deploymentUrlPrefix": "http://nodetemplateprojecthost/",
-	"sourceDirs": ["src","test"]
+	"deploymentUrlPrefix": "http://nodetemplateprojecthost/"
 }
